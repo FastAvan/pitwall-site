@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PitWall Ultra · Soporte</title>
+<meta name="description" content="Ayuda y soporte de PitWall Ultra, el cuadro de mandos de telemetría para juegos de carreras.">
+<link rel="stylesheet" href="style.css">
+<main>
+<nav><a href="index.html">PitWall Ultra</a><a href="support.html">Soporte</a><a href="privacy.html">Política de privacidad</a><a href="#en">English</a></nav>
+<h1>PitWall Ultra · Soporte</h1>
+<p class="dim">Cuadro de mandos de telemetría para iPhone y iPad. Compatible con Gran Turismo 7, F1 25, Assetto Corsa, Forza y EA SPORTS WRC.</p>
+
+<h2>¿Necesitas ayuda?</h2>
+<p>Abre una incidencia en <a href="https://github.com/FastAvan/pitwall-site/issues">github.com/FastAvan/pitwall-site/issues</a> contándonos qué juego usas, qué mensaje aparece en la tira de estado de la app (arriba a la izquierda) y qué modelo de dispositivo tienes. Respondemos en cuanto podemos.</p>
+
+<h2>Cómo conectar cada juego</h2>
+<p>El dispositivo y el juego tienen que estar en la <strong>misma red</strong> (por ejemplo, el mismo Wi-Fi). En la app, toca el engranaje y elige el juego en <em>Ajustes → Juego</em>.</p>
+<ul>
+<li><strong>Gran Turismo 7 (PlayStation 5):</strong> escribe la IP de la consola (en la PS5: <em>Ajustes → Red → Ver estado de la conexión</em>), pulsa <em>Conectar</em> y ponte en pista. La consola solo envía datos durante la conducción, no en los menús.</li>
+<li><strong>F1 25 (PlayStation, Xbox o PC):</strong> en la app elige F1 25 y pulsa <em>Escuchar</em>; la app te muestra la IP de tu dispositivo. En el juego, ve a <em>Ajustes → Telemetría UDP</em>, actívala, escribe esa IP, puerto <code>20777</code>, formato <code>2025</code>.</li>
+<li><strong>Assetto Corsa (solo la versión original, en PC):</strong> escribe la IP del ordenador y pulsa <em>Conectar</em>. Permite el puerto UDP <code>9996</code> en el firewall del PC. Este juego no envía combustible ni temperaturas.</li>
+</ul>
+<p>¿Sin el juego a mano? En <em>Ajustes</em> hay un <em>Modo demo</em> con datos simulados.</p>
+
+<h2>No llegan datos</h2>
+<ul>
+<li>Comprueba que el dispositivo y la consola o el PC están en la misma red. Algunas redes de invitados o repetidores aíslan los dispositivos entre sí.</li>
+<li>La primera vez, iOS pide permiso para acceder a la red local. Si lo rechazaste, actívalo en <em>Ajustes de iOS → PitWall Ultra → Red local</em>.</li>
+<li>Comprueba que la IP es la correcta y que estás en pista (en GT7) o que la telemetría UDP está activada (en F1 25).</li>
+<li>Mensaje <em>«Formato de telemetría … no soportado»</em>: el juego usa un formato de paquete distinto del que la app entiende (F1 25 usa el formato 2025).</li>
+</ul>
+
+<h2>Usar el iPad como segunda pantalla</h2>
+<p>Abre la app en el iPhone conectado al juego y en el iPad, en <em>Ajustes → Modo → Segunda pantalla</em>. Se enlazan solos por la red local. Acepta el permiso de red local en los dos dispositivos.</p>
+
+<h2>Coches eléctricos</h2>
+<p>La app detecta si el coche es eléctrico y adapta el cuadro (velocidad en el arco, marcha «D», batería en vez de combustible). Puedes forzarlo en <em>Ajustes → Coche</em>.</p>
+
+<h2 id="en">English</h2>
+<p><strong>PitWall Ultra</strong> is a telemetry dashboard for iPhone and iPad that works with Gran Turismo 7, F1 25, Assetto Corsa (original, PC), Forza and EA SPORTS WRC. For help, open an issue at <a href="https://github.com/FastAvan/pitwall-site/issues">github.com/FastAvan/pitwall-site/issues</a> and tell us which game you use, the message shown in the status strip at the top left of the app, and your device model.</p>
+<ul>
+<li>Your device and the game must be on the same network. Tap the gear icon and pick the game under <em>Ajustes → Juego</em>.</li>
+<li><strong>Gran Turismo 7:</strong> enter the PS5's IP address and drive; the console only sends data on track.</li>
+<li><strong>F1 25:</strong> tap <em>Escuchar</em>, then in-game enable UDP telemetry with the IP shown in the app, port 20777, format 2025.</li>
+<li><strong>Assetto Corsa (PC):</strong> enter the PC's IP address and allow UDP port 9996 in its firewall. It does not send fuel or temperatures.</li>
+<li>If iOS asks for Local Network access, allow it (iOS Settings → PitWall Ultra → Local Network).</li>
+<li>A <em>Modo demo</em> with simulated data is available in Settings.</li>
+</ul>
+<p class="dim">PitWall Ultra is an independent app, not affiliated with or endorsed by Sony Interactive Entertainment, Polyphony Digital, Electronic Arts, Codemasters, Formula One, Kunos Simulazioni or 505 Games. All trademarks belong to their owners.</p>
+</main>

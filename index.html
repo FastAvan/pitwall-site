@@ -2,49 +2,135 @@
 <html lang="es">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PitWall Ultra · Soporte</title>
-<meta name="description" content="Ayuda y soporte de PitWall Ultra, el cuadro de mandos de telemetría para juegos de carreras.">
-<link rel="stylesheet" href="style.css">
-<main>
-<nav><a href="index.html">Soporte</a><a href="privacy.html">Política de privacidad</a><a href="#en">English</a></nav>
-<h1>PitWall Ultra · Soporte</h1>
-<p class="dim">Cuadro de mandos de telemetría para iPhone y iPad. Compatible con Gran Turismo 7, F1 25 y Assetto Corsa.</p>
+<title>PitWall Ultra · Telemetría para sim racing</title>
+<meta name="description" content="PitWall Ultra convierte tu iPhone o iPad en un cuadro de mandos en tiempo real para Gran Turismo 7, F1 25, Assetto Corsa, Forza y EA SPORTS WRC: mapa del circuito, RADIO con IA y tus tiempos en PDF.">
+<meta property="og:title" content="PitWall Ultra">
+<meta property="og:description" content="Live telemetry dashboard for sim racing on iPhone and iPad: track map, RADIO race engineer and your times as a PDF.">
+<meta property="og:image" content="https://fastavan.github.io/pitwall-site/img/es-5.jpg">
+<meta name="theme-color" content="#0b0d10">
+<link rel="icon" href="img/icon.jpg">
+<link rel="stylesheet" href="site.css">
+<script>
+try{var l=localStorage.getItem('lang')||((navigator.language||'es').slice(0,2)=='es'?'es':'en');document.documentElement.lang=l}catch(e){}
+</script>
+<div class="wrap">
+<header>
+  <a class="brand" href="#"><img src="img/icon.jpg" alt="">PitWall Ultra</a>
+  <nav>
+    <a href="#funciones"><span lang="es">Funciones</span><span lang="en">Features</span></a>
+    <a href="#juegos"><span lang="es">Juegos</span><span lang="en">Games</span></a>
+    <a href="support.html"><span lang="es">Soporte</span><span lang="en">Support</span></a>
+    <button class="lang" id="lang" type="button">EN / ES</button>
+  </nav>
+</header>
 
-<h2>¿Necesitas ayuda?</h2>
-<p>Abre una incidencia en <a href="https://github.com/FastAvan/pitwall-site/issues">github.com/FastAvan/pitwall-site/issues</a> contándonos qué juego usas, qué mensaje aparece en la tira de estado de la app (arriba a la izquierda) y qué modelo de dispositivo tienes. Respondemos en cuanto podemos.</p>
+<div class="hero">
+  <img class="icon" src="img/icon.jpg" alt="PitWall Ultra">
+  <h1><span lang="es">Tu carrera,<br><em>a la vista.</em></span><span lang="en">Your race,<br><em>in full view.</em></span></h1>
+  <p class="lead">
+    <span lang="es">Convierte tu iPhone o iPad en un cuadro de mandos en tiempo real para tus carreras en el simulador. Ponlo en un soporte junto al volante y conduce con toda la información a la vista.</span>
+    <span lang="en">Turn your iPhone or iPad into a real-time dashboard for your sim racing. Put it on a mount next to the wheel and drive with everything in view.</span>
+  </p>
+  <a class="btn" href="https://apps.apple.com/es/app/pitwall-ultra/id6813846928">
+    <span lang="es">Descargar en el App Store</span><span lang="en">Download on the App Store</span>
+  </a>
+  <span class="price"><span lang="es">iPhone y iPad · 0,99 € · Sin cuentas, sin anuncios, sin recopilar datos</span><span lang="en">iPhone and iPad · €0.99 · No accounts, no ads, no data collected</span></span>
+  <div class="shot-wide">
+    <img lang="es" src="img/es-5.jpg" width="1400" height="644" alt="Cuadro de mandos con velocímetro en anillo, vuelta, neumáticos y pedales">
+    <img lang="en" src="img/en-5.jpg" width="1400" height="644" alt="Dashboard with ring gauge, lap, tyres and pedals">
+  </div>
+</div>
 
-<h2>Cómo conectar cada juego</h2>
-<p>El dispositivo y el juego tienen que estar en la <strong>misma red</strong> (por ejemplo, el mismo Wi-Fi). En la app, toca el engranaje y elige el juego en <em>Ajustes → Juego</em>.</p>
-<ul>
-<li><strong>Gran Turismo 7 (PlayStation 5):</strong> escribe la IP de la consola (en la PS5: <em>Ajustes → Red → Ver estado de la conexión</em>), pulsa <em>Conectar</em> y ponte en pista. La consola solo envía datos durante la conducción, no en los menús.</li>
-<li><strong>F1 25 (PlayStation, Xbox o PC):</strong> en la app elige F1 25 y pulsa <em>Escuchar</em>; la app te muestra la IP de tu dispositivo. En el juego, ve a <em>Ajustes → Telemetría UDP</em>, actívala, escribe esa IP, puerto <code>20777</code>, formato <code>2025</code>.</li>
-<li><strong>Assetto Corsa (solo la versión original, en PC):</strong> escribe la IP del ordenador y pulsa <em>Conectar</em>. Permite el puerto UDP <code>9996</code> en el firewall del PC. Este juego no envía combustible ni temperaturas.</li>
-</ul>
-<p>¿Sin el juego a mano? En <em>Ajustes</em> hay un <em>Modo demo</em> con datos simulados.</p>
+<div class="games" id="juegos">
+  <span>Gran Turismo 7</span><span>F1 25</span><span>Assetto Corsa</span><span>Forza Motorsport / Horizon</span><span>EA SPORTS WRC</span>
+</div>
 
-<h2>No llegan datos</h2>
-<ul>
-<li>Comprueba que el dispositivo y la consola o el PC están en la misma red. Algunas redes de invitados o repetidores aíslan los dispositivos entre sí.</li>
-<li>La primera vez, iOS pide permiso para acceder a la red local. Si lo rechazaste, actívalo en <em>Ajustes de iOS → PitWall Ultra → Red local</em>.</li>
-<li>Comprueba que la IP es la correcta y que estás en pista (en GT7) o que la telemetría UDP está activada (en F1 25).</li>
-<li>Mensaje <em>«Formato de telemetría … no soportado»</em>: el juego usa un formato de paquete distinto del que la app entiende (F1 25 usa el formato 2025).</li>
-</ul>
+<section>
+  <h2><span lang="es">Así se ve</span><span lang="en">What it looks like</span></h2>
+  <div class="strip">
+    <img lang="es" src="img/es-m1.jpg" width="560" height="1216" loading="lazy" alt="Tu circuito, en vivo: el mapa del trazado con tu coche">
+    <img lang="en" src="img/en-m1.jpg" width="560" height="1216" loading="lazy" alt="Your circuit, live: the track map with your car on it">
+    <img lang="es" src="img/es-m2.jpg" width="560" height="1216" loading="lazy" alt="RADIO, tu ingeniero de carrera">
+    <img lang="en" src="img/en-m2.jpg" width="560" height="1216" loading="lazy" alt="RADIO, your race engineer">
+    <img lang="es" src="img/es-m3.jpg" width="560" height="1216" loading="lazy" alt="Indicadores a tu gusto: tres de los doce modelos">
+    <img lang="en" src="img/en-m3.jpg" width="560" height="1216" loading="lazy" alt="Gauges your way: three of the twelve models">
+    <img lang="es" src="img/es-m4.jpg" width="560" height="1216" loading="lazy" alt="Delta, combustible y sectores">
+    <img lang="en" src="img/en-m4.jpg" width="560" height="1216" loading="lazy" alt="Delta, fuel and sectors">
+    <img lang="es" src="img/es-m5.jpg" width="560" height="1216" loading="lazy" alt="Cinco juegos, una sola app">
+    <img lang="en" src="img/en-m5.jpg" width="560" height="1216" loading="lazy" alt="Five games, one app">
+    <img lang="es" src="img/es-m6.jpg" width="560" height="1216" loading="lazy" alt="También coches eléctricos">
+    <img lang="en" src="img/en-m6.jpg" width="560" height="1216" loading="lazy" alt="Electric cars too">
+    <img lang="es" src="img/es-m7.jpg" width="560" height="1216" loading="lazy" alt="Tu estilo, tu pantalla">
+    <img lang="en" src="img/en-m7.jpg" width="560" height="1216" loading="lazy" alt="Your style, your screen">
+  </div>
+</section>
 
-<h2>Usar el iPad como segunda pantalla</h2>
-<p>Abre la app en el iPhone conectado al juego y en el iPad, en <em>Ajustes → Modo → Segunda pantalla</em>. Se enlazan solos por la red local. Acepta el permiso de red local en los dos dispositivos.</p>
+<section id="funciones">
+  <h2><span lang="es">Todo lo que necesitas en pista</span><span lang="en">Everything you need on track</span></h2>
+  <div class="grid">
+    <div class="card"><h3><span lang="es">Un indicador central a tu gusto</span><span lang="en">A central gauge your way</span></h3>
+      <p><span lang="es">Elige entre doce modelos: anillo, sector grueso, aguja, marcas radiales, barra, segmentos y seis digitales — velocidad con barra de RPM, marcha con arco, LEDs estilo F1, siete segmentos y dos diseños propios, «Modern» y «e-Racecar». Mide RPM o velocidad, en km/h o mph, con tu color y zona roja ajustada a tu coche.</span><span lang="en">Pick from twelve models: ring, thick sector, needle, radial ticks, bar, segments, and six digital ones — speed with an RPM bar, gear with an arc, F1-style LEDs, seven-segment and two original designs, “Modern” and “e-Racecar”. Measures RPM or speed, in km/h or mph, with your colour and a red shift zone matched to your car.</span></p></div>
+    <div class="card"><h3><span lang="es">Mapa del circuito y biblioteca</span><span lang="en">Track map and library</span></h3>
+      <p><span lang="es">Desde la primera vuelta ves el trazado con tu coche en vivo, coloreado según ganas o pierdes tiempo. PitWall Ultra recuerda cada circuito y lo muestra completo la próxima vez; ponles nombre en Ajustes.</span><span lang="en">From the first lap you see the circuit's layout with your car live on it, coloured by where you gain or lose time. PitWall Ultra remembers every circuit you drive and shows it complete next time; name them in Settings.</span></p></div>
+    <div class="card"><h3><span lang="es">RADIO, tu ingeniero de carrera</span><span lang="en">RADIO, your race engineer</span></h3>
+      <p><span lang="es">Comenta cada curva y cada vuelta y avisa en vivo de la vuelta rápida, la ventana de parada, un rival que se acerca y el semáforo de sectores. Si en la carrera no baja el combustible, no te avisa de consumo. Los datos los calcula la app; si tu iPhone lo permite, IA de Apple en el dispositivo añade un consejo breve. Se puede desactivar.</span><span lang="en">Comments on every corner and every lap — where you gained or lost time, when to push or save fuel — and calls out the fastest lap, the pit window, a rival closing in and the sector traffic light live. If fuel never drops in a race, it won't warn about consumption. The app works out the facts; if your iPhone supports it, an on-device Apple AI model adds a short tip. Can be switched off.</span></p></div>
+    <div class="card"><h3><span lang="es">Tus tiempos en PDF</span><span lang="en">Your times as a PDF</span></h3>
+      <p><span lang="es">Al terminar la carrera, la app te ofrece un PDF con tu resumen: mejor vuelta, media, tiempo total, gráfico de vueltas, trazado del circuito y la tabla completa. Guárdalo o compártelo. Se conservan las últimas 10 para volver a ellas cuando quieras.</span><span lang="en">When the race ends, the app offers a PDF summary: best lap, average, total time, a lap chart, the circuit's outline and the full table. Save it or share it. The last 10 are kept so you can come back to them.</span></p></div>
+    <div class="card"><h3><span lang="es">Delta, combustible y sectores</span><span lang="en">Delta, fuel and sectors</span></h3>
+      <p><span lang="es">Ves si vas por delante o por detrás de tu mejor vuelta, calibrado contra el tiempo real del juego. Calcula el combustible por vuelta, cuántas quedan y si llegas a meta, y donde el juego los envía, los tiempos por sector.</span><span lang="en">See whether you're ahead of or behind your best lap, calibrated against the game's own real lap time. PitWall Ultra works out fuel per lap, how many laps are left, and whether you make the flag, plus sector times where the game sends them.</span></p></div>
+    <div class="card"><h3><span lang="es">Testigos como en un coche real</span><span lang="en">Warning lights like a real car</span></h3>
+      <p><span lang="es">Luces, largas, combustible bajo, temperaturas, presión de aceite, neumáticos calientes, freno de mano, tracción, ABS, limitador, pit lane y DRS. Cada juego muestra los que envía. Elige cuáles ver y su orden.</span><span lang="en">Lights, high beams, low fuel, temperatures, oil pressure, hot tyres, handbrake, traction control, ABS, limiter, pit lane and DRS. Each game shows what it actually sends. Choose which to show and their order.</span></p></div>
+    <div class="card"><h3><span lang="es">Luces de cambio y vibración</span><span lang="en">Shift lights and haptics</span></h3>
+      <p><span lang="es">Una barra de LEDs o un marco que rodea la pantalla se enciende al acercarte al punto de cambio y parpadea en el limitador. En iPhone, una vibración te avisa.</span><span lang="en">An LED bar or a glowing frame around the screen lights up as you approach the shift point and flashes at the limiter. On iPhone, a tap tells you.</span></p></div>
+    <div class="card"><h3><span lang="es">Zonas laterales y perfiles</span><span lang="en">Side zones and profiles</span></h3>
+      <p><span lang="es">A cada lado hay pantallas de paneles que recorres deslizando: vuelta y tiempos, últimas vueltas, neumáticos, pedales, motor, combustible, estrategia, delta, sectores y una traza. Decide sus paneles y orden, y guarda un ajuste por juego o coche, o compártelo con un amigo.</span><span lang="en">On each side, screens of panels you swipe through: lap and times, recent laps, tyres, pedals, engine, fuel, strategy, delta, sectors, and a trace. Choose the panels and their order, and save a setup per game or car, or share it with a friend.</span></p></div>
+    <div class="card"><h3><span lang="es">iPad como segunda pantalla, eléctricos y avisos</span><span lang="en">iPad as a second screen, electric cars and notices</span></h3>
+      <p><span lang="es">Con la app abierta en un iPhone conectado al juego, tu iPad se enlaza solo por la red local y muestra otra información. Detecta el coche eléctrico y adapta el cuadro. Un aviso marca cada vuelta y tu mejor. Si se corta la señal, el indicador muestra «SIN DATOS» y todo se reinicia para la siguiente carrera.</span><span lang="en">With the app open on an iPhone connected to the game, your iPad links up on its own over the local network and shows other information. It detects an electric car and adapts the dashboard. A pop-up marks each lap and your best. If the signal drops, the gauge shows “NO DATA” and everything resets for the next race.</span></p></div>
+    <div class="card"><h3><span lang="es">Tu estilo, tu pantalla</span><span lang="en">Your style, your screen</span></h3>
+      <p><span lang="es">Tipografía redondeada, estándar o expandida; seis colores de acento; cinco fondos; grosor y puntas a tu gusto. En español e inglés, y compatible con VoiceOver.</span><span lang="en">Rounded, standard or expanded type; six accent colors; five backgrounds; stroke thickness and ends. In English and Spanish, and works with VoiceOver.</span></p></div>
+  </div>
+</section>
 
-<h2>Coches eléctricos</h2>
-<p>La app detecta si el coche es eléctrico y adapta el cuadro (velocidad en el arco, marcha «D», batería en vez de combustible). Puedes forzarlo en <em>Ajustes → Coche</em>.</p>
+<section>
+  <div class="split">
+    <div>
+      <h2><span lang="es">Mapa, neumáticos y combustible, de un vistazo</span><span lang="en">Map, tyres and fuel at a glance</span></h2>
+      <p style="color:var(--dim)"><span lang="es">En el iPad, el mapa del circuito a un lado y a otro la temperatura y el desgaste de cada neumático, el consumo por vuelta, las vueltas que aguanta el depósito y el margen hasta la bandera. Y si dejas el iPhone en el volante, el iPad se enlaza solo como segunda pantalla.</span><span lang="en">On iPad, the track map on one side and on the other each tyre's temperature and wear, fuel use per lap, laps the tank lasts and the margin to the flag. And with an iPhone on the wheel, the iPad links up on its own as a second screen.</span></p>
+      <p class="dim" style="color:var(--dim);font-size:.85rem"><span lang="es">El desgaste de neumáticos lo envían F1 25 y Forza Motorsport; los demás juegos solo envían temperatura.</span><span lang="en">Tyre wear is sent by F1 25 and Forza Motorsport; other games send temperature only.</span></p>
+    </div>
+    <div class="ipad">
+      <img lang="es" src="img/es-ipad.jpg" width="1400" height="1050" loading="lazy" alt="PitWall Ultra en iPad: mapa del circuito, desgaste de neumáticos y consumo de combustible">
+      <img lang="en" src="img/en-ipad.jpg" width="1400" height="1050" loading="lazy" alt="PitWall Ultra on iPad: track map, tyre wear and fuel consumption">
+    </div>
+  </div>
+</section>
 
-<h2 id="en">English</h2>
-<p><strong>PitWall Ultra</strong> is a telemetry dashboard for iPhone and iPad that works with Gran Turismo 7, F1 25 and Assetto Corsa (original, PC). For help, open an issue at <a href="https://github.com/FastAvan/pitwall-site/issues">github.com/FastAvan/pitwall-site/issues</a> and tell us which game you use, the message shown in the status strip at the top left of the app, and your device model.</p>
-<ul>
-<li>Your device and the game must be on the same network. Tap the gear icon and pick the game under <em>Ajustes → Juego</em>.</li>
-<li><strong>Gran Turismo 7:</strong> enter the PS5's IP address and drive; the console only sends data on track.</li>
-<li><strong>F1 25:</strong> tap <em>Escuchar</em>, then in-game enable UDP telemetry with the IP shown in the app, port 20777, format 2025.</li>
-<li><strong>Assetto Corsa (PC):</strong> enter the PC's IP address and allow UDP port 9996 in its firewall. It does not send fuel or temperatures.</li>
-<li>If iOS asks for Local Network access, allow it (iOS Settings → PitWall Ultra → Local Network).</li>
-<li>A <em>Modo demo</em> with simulated data is available in Settings.</li>
-</ul>
-<p class="dim">PitWall Ultra is an independent app, not affiliated with or endorsed by Sony Interactive Entertainment, Polyphony Digital, Electronic Arts, Codemasters, Formula One, Kunos Simulazioni or 505 Games. All trademarks belong to their owners.</p>
-</main>
+<section>
+  <h2><span lang="es">Cinco juegos, cada uno a su manera</span><span lang="en">Five games, each its own way</span></h2>
+  <div class="grid">
+    <div class="card"><h3>Gran Turismo 7 <small>PS5</small></h3><p><span lang="es">La IP de la consola en Ajustes.</span><span lang="en">The console's IP address in Settings.</span></p></div>
+    <div class="card"><h3>F1 25 <small>PlayStation · Xbox · PC</small></h3><p><span lang="es">Telemetría UDP con la IP de tu dispositivo, que la app te muestra, y el puerto 20777.</span><span lang="en">UDP telemetry with your device's IP, which the app shows you, and port 20777.</span></p></div>
+    <div class="card"><h3>Assetto Corsa <small><span lang="es">PC, original</span><span lang="en">PC, original</span></small></h3><p><span lang="es">La IP del ordenador. Solo envía velocidad, RPM, marcha, pedales, tiempos y pit.</span><span lang="en">The computer's IP address. It only sends speed, RPM, gear, pedals, times and pit.</span></p></div>
+    <div class="card"><h3>Forza Motorsport / Horizon</h3><p><span lang="es">Activa Data Out con la IP de tu dispositivo y el puerto que elijas.</span><span lang="en">Turn on Data Out with your device's IP and the port you choose.</span></p></div>
+    <div class="card"><h3>EA SPORTS WRC</h3><p><span lang="es">Telemetría UDP con la IP de tu dispositivo y el puerto 20777.</span><span lang="en">UDP telemetry with your device's IP and port 20777.</span></p></div>
+  </div>
+  <p style="color:var(--dim)"><span lang="es">Misma red que el juego. Sin juego a mano: el modo demo lo prueba todo con datos simulados. </span><span lang="en">Same network as the game. No game at hand: demo mode tries everything with simulated data. </span><a href="support.html"><span lang="es">Guía de conexión por juego →</span><span lang="en">Per-game setup guide →</span></a></p>
+</section>
+
+<section>
+  <h2><span lang="es">Privado por diseño</span><span lang="en">Private by design</span></h2>
+  <p style="color:var(--dim);max-width:720px"><span lang="es">PitWall Ultra no recopila datos personales: todo ocurre dentro de tu red local, y el consejo de RADIO se genera en el propio dispositivo. Sin cuentas, sin anuncios, sin servidores.</span><span lang="en">PitWall Ultra collects no personal data: everything happens inside your local network, and RADIO's tip is generated on the device itself. No accounts, no ads, no servers.</span></p>
+</section>
+
+<footer>
+  <div class="links">
+    <a href="support.html"><span lang="es">Soporte</span><span lang="en">Support</span></a>
+    <a href="privacy.html"><span lang="es">Política de privacidad</span><span lang="en">Privacy policy</span></a>
+    <a href="https://github.com/FastAvan/pitwall-site/issues"><span lang="es">Contacto</span><span lang="en">Contact</span></a>
+  </div>
+  <p><span lang="es">PitWall Ultra es una app independiente, sin relación ni respaldo de Sony Interactive Entertainment, Polyphony Digital, Electronic Arts, Codemasters, Formula One, Kunos Simulazioni, Microsoft, Turn 10 Studios, Playground Games. Todas las marcas pertenecen a sus propietarios.</span><span lang="en">PitWall Ultra is an independent app, not affiliated with or endorsed by Sony Interactive Entertainment, Polyphony Digital, Electronic Arts, Codemasters, Formula One, Kunos Simulazioni, Microsoft, Turn 10 Studios, Playground Games. All trademarks belong to their owners.</span></p>
+</footer>
+</div>
+<script>
+document.getElementById('lang').onclick=function(){var l=document.documentElement.lang=='es'?'en':'es';document.documentElement.lang=l;try{localStorage.setItem('lang',l)}catch(e){}}
+</script>
