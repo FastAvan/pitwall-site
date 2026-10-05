@@ -41,3 +41,5 @@ footer a{color:var(--dim)} footer .links{display:flex;gap:18px;margin-bottom:14p
 .strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 18px;-webkit-overflow-scrolling:touch}
 .strip img{flex:0 0 auto;height:min(560px,70vh);width:auto;aspect-ratio:560/1216;border-radius:22px;border:1px solid var(--line);scroll-snap-align:start}
 .card h3 small{display:block;font-size:.78rem;font-weight:500;color:var(--dim);margin-top:2px}
+
+.news{margin:0;padding-left:1.2em;color:var(--dim)} .news li{margin:.5em 0} .news b{color:var(--fg);font-weight:600}
